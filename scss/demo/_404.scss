@@ -1,0 +1,32 @@
+/* ----------------------------------------------------------------
+
+	404.scss
+
+-----------------------------------------------------------------*/
+
+
+.error-404 {
+    position: relative;
+
+    .error-link {   
+        position: absolute;
+        bottom: 20%;
+        width: 100%;
+    }
+    
+    @include media-breakpoint-down(sm) {
+
+        img {
+            height: 48% !important;
+        }
+
+        .error-link {
+            bottom: 18%;
+            
+            a {
+                padding: .8rem 1.2rem;
+                font-size: .7rem;
+            }
+        }
+    }
+}

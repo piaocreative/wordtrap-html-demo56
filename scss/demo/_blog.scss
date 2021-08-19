@@ -1,0 +1,47 @@
+
+/* ----------------------------------------------------------------
+
+	blog.scss
+
+-----------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+	Blog
+-----------------------------------------------------------------*/
+
+.post {
+	position: relative;
+
+	@include media-breakpoint-down(lg) {
+		margin: 0 !important;
+	}
+}
+
+.post-thumbnail {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+
+	img {
+		border-radius: 1rem;
+	}
+
+	a {
+		display: block;
+	}
+}
+
+.post-content {
+	.entry-title {
+		color: #282828;
+		font-family: $heading-font;
+		line-height: 1.6rem;
+		letter-spacing: 0.05rem;
+	}
+
+	.entry-link {
+		text-decoration: none;
+		font-size: 0.875rem;
+	}
+}

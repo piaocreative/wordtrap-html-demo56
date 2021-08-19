@@ -1,0 +1,29 @@
+/* ----------------------------------------------------------------
+
+	Contact.scss
+
+-----------------------------------------------------------------*/
+
+.contact-banner {
+    .sub-title {
+
+        p {
+            font-size: 3.75rem !important;
+            line-height: 4rem;
+        }
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+}
+
+#contact-info {
+    h5 {
+        color: #504a4a;
+        letter-spacing: 0.1rem;
+        font-family: $body-font;
+        font-weight: 400;
+    }
+}

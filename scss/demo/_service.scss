@@ -1,0 +1,144 @@
+
+/* ----------------------------------------------------------------
+
+	Service.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Service
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for Service pages. Thanks!
+-----------------------------------------------------------------*/
+.service {
+	position: relative;
+	margin-bottom: 1.875rem;
+
+	@include media-breakpoint-down(lg) {
+		margin: 0 !important;
+	}
+
+	.service-image {
+		position: relative;
+
+		img {
+			border-radius: 0.5rem;
+		}
+
+		> a:nth-of-type(2) {
+			opacity: 0;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			@include transition(all 0.3s ease-in-out);
+		}
+	}
+
+	.service-btn {
+		a {
+			color: #a6ce8c;
+			font-size: 0.875rem;
+			text-decoration: none;
+			letter-spacing: 0.05rem;
+		}
+	}
+
+	.service-details {
+		padding: 1.875rem;
+
+		.service-title {
+			font-size: 1.125rem;
+			letter-spacing: 0.1rem;
+			color: #4a4f53;
+			font-weight: 600;
+			font-family: $body-font;
+		}
+	}
+}
+
+.service-menu {
+	a {
+		text-decoration: none;
+	}
+
+	.service-list {
+		border: 1px solid #edf0e9;
+		padding: 2rem 1.5rem 3rem;
+	
+		ul {
+			list-style: none;
+			padding: 0;
+	
+			li {
+				position: relative;
+				padding: 0.5rem 0.6rem;
+				border-bottom: 1px dotted #eaeaea;
+				
+				a {
+					text-decoration: none;
+				}
+	
+				&:hover {
+					cursor: pointer;
+					background-color: #f1f7ed;
+					border-radius: 0.5rem;
+
+					.list-price {
+						opacity: 0;
+						@include transition(all 0.3s ease-in-out);
+					}
+
+					.signup-link {
+						opacity: 1;
+						@include transition(all 0.3s ease-in-out);
+					}
+
+					.list-item {
+						color: $theme-color;
+					}
+				}
+			}
+	
+			.list-item {
+				color: #848484;
+			}
+	
+			.signup-link {
+				opacity: 0;
+				position: absolute;
+				right: 1;
+
+				a {
+					padding: .5rem .8rem;
+					border-radius: .7rem;
+				}
+			}
+		}
+	}
+	
+	.list-link {
+		color: #a6ce8c;
+		letter-spacing: 0.05rem;
+	}
+
+	@include media-breakpoint-down(sm) {
+		
+		.service-list {
+			font-size: 0.7rem;
+			padding: 0.5rem;
+		}
+
+		.signup-link {
+			a {
+				padding: .33rem .8rem;
+				font-size: 0.6rem;
+			}
+		}
+	}
+}
+
