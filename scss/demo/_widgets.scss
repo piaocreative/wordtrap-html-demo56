@@ -88,13 +88,11 @@
 			list-style: none;
 
 			li {
-
-				margin-bottom: 0.7rem;
+				margin-bottom: 0.1rem;
 
 				a {
 					color: #868686;
-					font-weight: 600;
-					text-transform: uppercase;
+					font-weight: 400;
 					text-decoration: none;
 					font-size: 0.875rem;
 
@@ -123,15 +121,14 @@
 
 	// Widget - Payments
 	&.widget-payment {
-
 		p {
 			color: #61605f;
 			display: block;
 			text-decoration: none;
 			font-size: 0.675rem;
 		}
-		.payments {
 
+		.payments {
 			.payment-icon {
 				display: inline-block;
 				vertical-align: middle;
@@ -173,7 +170,6 @@
 	// Widget - custom html
 	&.widget-custom-html {
 		.widget-content {
-
 			a {
 				display: block;
 				text-decoration: none;
@@ -258,14 +254,6 @@
 			::placeholder {
 				color: #c3c3c3;
 				opacity: 1; /* Firefox */
-			}
-			  
-			:-ms-input-placeholder { /* Internet Explorer 10-11 */
-			color: #c3c3c3;
-			}
-			
-			::-ms-input-placeholder { /* Microsoft Edge */
-			color: #c3c3c3;
 			}
 		}
 	}

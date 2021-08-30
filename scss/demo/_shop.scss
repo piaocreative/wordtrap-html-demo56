@@ -60,7 +60,7 @@
 	}
 
 	.product-price {
-		font-size: 1rem;
+		font-size: 0.875rem;
 		font-family: $body-font;
 		font-weight: 300;
 		line-height: 1;
@@ -84,7 +84,7 @@
 	.product-title {
 		font-family: $body-font;
 		font-size: 1.125rem;
-		font-weight: 500;
+		font-weight: 400;
 		line-height: 1.875rem;
 		margin-bottom: 0.5rem;
 
@@ -241,6 +241,11 @@
 				@include media-breakpoint-down(lg) {
 					line-height: 3rem;
 				}
+			}
+
+			a {
+				font-size: 0.875rem;
+				font-weight: 300;
 			}
 
 			@include media-breakpoint-down(lg) {
