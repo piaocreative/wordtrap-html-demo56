@@ -1,14 +1,12 @@
 .logos {
-
 	p {
 		font-size: 2.25rem;
 		line-height: 3.5rem;
 	}
 
-	@include media-breakpoint-down(sm) {
-		.col-lg-5 {
-			padding-top: 2rem !important;
-			padding-bottom: 2rem !important;
+	@include media-breakpoint-down(xl) {
+		img {
+			object-fit: cover;
 		}
 	}
 } 

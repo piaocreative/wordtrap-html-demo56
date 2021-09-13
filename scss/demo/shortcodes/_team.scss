@@ -12,6 +12,12 @@
 .team {
     position: relative;
     margin-left: -0.5rem;
+
+    .team-image {
+        img {
+            width: 100%;
+        }
+    }
     
     .team-details {
         position: absolute;

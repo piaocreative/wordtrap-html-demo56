@@ -40,10 +40,9 @@
 
 	// Widget - Social
 	&.widget-social {
-		.social-icons {
 
+		.social-icons {
 			padding: 0;
-			
 			list-style: none;
 
 			li {
@@ -145,7 +144,8 @@
 				@include border-radius(0.25rem);
 
 				@include media-breakpoint-down(sm) {
-					width: 4rem !important;
+					width: 6rem !important;
+					height: 3.5rem;
 				}
 
 				&.visa {
