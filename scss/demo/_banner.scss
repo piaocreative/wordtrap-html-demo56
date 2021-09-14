@@ -18,20 +18,13 @@
 
 #banner {
     position: relative;
-
-    @include media-breakpoint-up(lg) {
-        height: 60%;
-    }
+    height: 40rem;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
-
-        @include media-breakpoint-down(sm) {
-            height: 60%;
-        }
     }
 
     .banner-wrap {
