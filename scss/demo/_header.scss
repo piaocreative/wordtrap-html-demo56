@@ -22,7 +22,7 @@
 
 	// Transparent header
 	&.transparent-header {
-		background-color: #857db8;
+		background-color: $white;
 		z-index: 199;
 
 		@include media-breakpoint-up(lg) {
@@ -35,60 +35,45 @@
 			}
 		}			
 	}
-
-	@include media-breakpoint-up(lg) {
-		margin-top: 3rem;
-
-		.navbar {
-			position: inherit !important;
-		}
-
-		#primary-menu {
-			position: absolute;
-			top: -3rem;
-			left: 0;
-			right: 0;
-		}
-	}
-
-	@include media-breakpoint-down(lg) {
-		margin-top: 0;
-
-		#primary-menu {
-			position: relative;
-			top: 0;
-			left: 0;
-			right: 0;
-			background: none !important;
-
-			ul {
-				display: block !important;
-				justify-content: start !important;
-			}
-		}
-	}
-
 }
-
-#header-wrap {
-	padding-left: 4.375rem;
-	padding-right: 4.375rem;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-
-	@include media-breakpoint-down(lg) {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
-
 
 .nav {
 	flex-wrap: nowrap;
 }
 
+.navbar {	
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	&.navbar-dark {
+		.nav-item {
+			&.current {
+				a {
+					color: rgba(#ffffff, 0.55);
+				}
+			}
+		}
+	}
+
+	&.navbar-light {
+		.nav-item {
+			&.current {
+				a {
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
 .navbar-toggler {
+	border-color: $theme-color;
 	border-radius: 0;
+	color: $theme-color;
+
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28166, 206, 140, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	}	
 }
 
 .navbar-collapse {
@@ -110,25 +95,10 @@
 -----------------------------------------------------------------*/
 
 .navbar-brand {
-	margin-right: 4.25rem;
-
-	@include media-breakpoint-up(lg) {
-		position: absolute;
-		left: 47%;
-	}
-
-	@include media-breakpoint-down(lg) {
-		position: relative;
-		left: 0;
-	}
-
 	img {
-		width: 75%;
-		height: auto;
+		max-width: 4.75rem;
 	}
 }
-
-
 
 
 /* ----------------------------------------------------------------
@@ -143,36 +113,15 @@
 -----------------------------------------------------------------*/
 
 #primary-menu {
-
-	padding: 0.5rem 0;
-
-	.navbar-nav {
-		flex-direction: inherit;
-	}
-
-	.nav-link {
-		color: $primary-menu-font-color;
-		font-family: $primary-menu-font;
+	.nav-link {		
+		font-family: $body-font;
 		font-size: $primary-menu-font-size;
 		font-weight: $primary-menu-font-weight;		
 		letter-spacing: $primary-menu-font-spacing;
 		text-transform: $primary-menu-font-tt;
 
-		&:hover {
-			color: #ccc !important;
-		}
-
-		@media (min-width: 1200px) {
-			line-height: 1;
-		}
-	}
-
-	.nav-item {
-		&.current,
-		&:hover {
-			a {
-				color: $theme-color;
-			}
+		@include media-breakpoint-up(lg) {
+			padding: 0 1.875rem;
 		}
 	}
 }
@@ -231,9 +180,9 @@
 			font-size: 11px;
 			font-weight: 500;
 			border-radius: 50%;
-			border: 1px solid #fff;
+			border: 1px solid  $white;
 			background-color: #ff6f61;
-			color: #fff;
+			color:  $white;
 		}
 	}
 }

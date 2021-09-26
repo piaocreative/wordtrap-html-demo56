@@ -16,8 +16,9 @@ textarea {
 
 // Form label
 .form-label {
-    font-size: 0.875rem;
     color: #7c7b7a;
+    font-size: 0.875rem;
+    line-height: 1;    
 }
 
 // Required field
@@ -36,4 +37,36 @@ textarea {
         background-repeat: no-repeat;
         background-size: 100%;
     }
+}
+
+
+// Signup Form
+#signup-form {
+    .form-label {
+        color: #b1e590;
+    }
+}
+
+#newsletter-form {
+	input {
+		color: $body-color;
+		background-color: #2e2e2e;
+		border: none;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+
+		&::placeholder {
+			color: #747474;
+		}
+	}
+
+	button {
+		background-color: #2e2e2e;
+        margin-left: -4.25rem;
+		
+		i {
+			font-size: 1.25rem;
+			line-height: 1.5rem;
+		}
+	}
 }

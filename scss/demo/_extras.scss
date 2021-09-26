@@ -10,185 +10,54 @@
 	Extra Styles
 -----------------------------------------------------------------*/
 
-.shipping-banner {
-	position: absolute;
-	left: 4.375rem;
-	top: 5.625rem;	
-}
-
-.link-icon {
-	background-image: url(../images/icons/link.png);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	display: inline-block;
-	width: 2.5625rem;
-	height: 2.5625rem;
-
-	&.black {
-		background-image: url(../images/icons/link_black.png);
-	}
-}
-
-a {
-	.link-icon {
-		@include transition(all 0.3s ease-in-out);
-	}
-
-	&:hover {
-		.link-icon {
-			@include translateX(1rem);
-		}
-	}	
-}
-
-
-.feedback {
-	input {
-		color: $body-color;
-		background-color: $third-color;
-		border: none;
-		border-top-left-radius: 0.5rem !important;
-		border-bottom-left-radius: 0.5rem !important;
-		&::placeholder {
-			color: #747474 !important;
-		}
-	}
-
-	button {
-		background-color: $third-color;
-		
-		i {
-			font-size: 1.25rem;
-			line-height: 1.5rem;
-		}
-	}
-}
-
-.testimonials-detail {
-	@include media-breakpoint-down(lg) {
-		padding: 1rem !important;
-	}
-}
-
-.contact {
-	.contact-email {
-		font-size: 2.25rem;
-		font-family: $heading-font;
-		font-weight: 400;
-		color: $primary;
-		line-height: 4rem;
-		margin-bottom: 0;
-	}
-
-	.contact-title {
-		font-size: $h1-font-size;
-		font-family: $body-font;
-		font-weight: 800;
-		color: $secondary;
-		line-height: 4rem;
-	}
-
-	.contact-icons {
-		&.dark-contact a {
-			color: white;
-			font-size: 0.7rem;
-		}
-
-		&.light-contact a {
-			color: $secondary;
-			font-size: 0.875rem;
-		}
-
-		li {
-
-			list-style: none;
-			margin-bottom: 0.3rem;
-
-			a {
-				font-family: $body-font;
-				line-height: 2rem;
-				
-				&:hover {
-					color: $primary;
-				}
-
-				.contact-icon {
-					color: $white;
-					display: inline-block;
-					margin-right: 1.2rem;
-					font-size: 1.2rem;
-					width: 1.8rem;
-					text-align: center;
-				}
-			}
-		}
-	}
-}
-
-
 .about-content {
 	background: url(../images/about/bg.png);
 	background-size: 100%;
-	background-position: 50%;
+	background-position: bottom;
+	background-repeat: no-repeat;
 
 	h3 {
 		line-height: 3.5rem;
 		font-size: 2.6rem;
 		font-weight: 300;
-
-		@include media-breakpoint-down (sm) {
-			line-height: 2.5rem;
-			font-size: 1.6rem;
-		}
 	}
 
 	.title {
 		letter-spacing: 0.5rem;
 		position: relative;
-	}
 
-	.text-border {
-		width: 11rem;
-		height: 1rem;
-		border-top: 1px solid $primary;
-		position: absolute;
-		right: 22rem;
-
-		&.right {
-			right: 0;
-			left: 22rem;
-		}
-
-		@include media-breakpoint-down(lg) {
-			border: none;
-			width: 0;
-			height: 0;
-		}
+		@include media-breakpoint-up(md) {
+			&::before {
+				content: "";
+				background-color: $theme-color;
+				display: block;
+				width: 7rem;
+				height: 2px;
+				margin-top: -1px;
+				position: absolute;
+				left: -9.25rem;
+				top: 50%;				
+			}
+	
+			&.right {
+				&::before {
+					left: auto;
+					right: -9.25rem;			
+				}
+			}
+		}		
 	}
 
 	.content {
 		line-height: 2.5rem;
 	}
-
-	@include media-breakpoint-down(lg) {
-		.row {
-			padding: 0 !important;
-		}
-
-		.about-detail {
-			padding: 0 !important;
-
-			.text-end {
-				text-align: left !important;
-			}
-		}
-	}
 }
 
 // Carosel arrow color change //
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
 	font-size: 2rem;
-	color: $theme-color !important;
+	color: $theme-color;
 	background: center;
 	margin-bottom: 3rem;
 
@@ -198,10 +67,6 @@ a {
 		border-radius: 50%;
 		opacity: 1;
 		z-index: 1;width: 4rem;
-	}
-
-	@include media-breakpoint-down(lg) {
-		display: none;
 	}
 }
 
@@ -218,12 +83,5 @@ a {
 
 	@include media-breakpoint-down(lg) {
 		right: 0;
-	}
-}
-
-#portfolio {
-
-	img {
-		border-radius: 1rem;
 	}
 }

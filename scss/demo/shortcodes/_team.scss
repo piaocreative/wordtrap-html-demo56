@@ -11,11 +11,19 @@
 
 .team {
     position: relative;
-    margin-left: -0.5rem;
+
+    @include media-breakpoint-up(md) {
+        margin-left: -0.5rem;
+    }
+    
 
     .team-image {
+        text-align: center;
+        
         img {
-            width: 100%;
+            @include media-breakpoint-up(md) {
+               width: 100%;            
+            }
         }
     }
     
@@ -28,13 +36,13 @@
 
         .team-skill {
             font-size: 0.875rem;
-            color: #a2a19f;
+            color: #848484;
         }
     
         .team-name {
             h5 {
-                color: #3a3a3a;
-                font-weight: 600;
+                color: #282828;
+                font-weight: 400;
                 letter-spacing: 0.1rem;
                 font-family: $body-font;
             }
@@ -46,9 +54,9 @@
                 font-size: 0.75rem;
             }
     
-            p {
+            span {
                 font-size: 0.875rem;
-                color: #a2a19f;
+                color: #848484;
             }
         }
     }

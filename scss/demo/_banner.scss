@@ -18,17 +18,13 @@
 
 #banner {
     position: relative;
-    height: 40rem;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .banner-wrap {
-        padding-left: 4.375rem;
-        padding-right: 4.375rem;
+    &.about-banner {
+        background-image: url(../images/banner/about-banner.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 7rem;
+        padding-bottom: 8rem;
     }
 }

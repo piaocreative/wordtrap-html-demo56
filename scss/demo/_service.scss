@@ -18,15 +18,11 @@
 	position: relative;
 	margin-bottom: 1.875rem;
 
-	@include media-breakpoint-down(lg) {
-		margin: 0 !important;
-	}
-
 	.service-image {
 		position: relative;
+		height: 20.25rem;
 
 		img {
-			width: 100%;
 			border-radius: 0.5rem;
 		}
 
@@ -36,6 +32,7 @@
 			z-index: -1;
 			top: 0;
 			left: 0;
+
 			@include transition(all 0.3s ease-in-out);
 		}
 	}
@@ -70,6 +67,11 @@
 	.service-list {
 		border: 1px solid #edf0e9;
 		padding: 2rem 1.5rem 3rem;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 0.7rem;
+			padding: 0.5rem;
+		}	
 	
 		ul {
 			list-style: none;
@@ -91,11 +93,13 @@
 
 					.list-price {
 						opacity: 0;
+
 						@include transition(all 0.3s ease-in-out);
 					}
 
 					.signup-link {
 						opacity: 1;
+
 						@include transition(all 0.3s ease-in-out);
 					}
 
@@ -117,6 +121,11 @@
 				a {
 					padding: .5rem .8rem;
 					border-radius: .7rem;
+
+					@include media-breakpoint-down(sm) {
+						padding: .33rem .8rem;
+						font-size: 0.6rem;
+					}
 				}
 			}
 		}
@@ -125,21 +134,6 @@
 	.list-link {
 		color: #a6ce8c;
 		letter-spacing: 0.05rem;
-	}
-
-	@include media-breakpoint-down(sm) {
-		
-		.service-list {
-			font-size: 0.7rem;
-			padding: 0.5rem;
-		}
-
-		.signup-link {
-			a {
-				padding: .33rem .8rem;
-				font-size: 0.6rem;
-			}
-		}
 	}
 }
 

@@ -18,6 +18,7 @@
 
 .widget {
 	position: relative;
+	margin-bottom: 1.875rem;
 
 	p {
 		font-family: $body-font;
@@ -40,7 +41,6 @@
 
 	// Widget - Social
 	&.widget-social {
-
 		.social-icons {
 			padding: 0;
 			list-style: none;
@@ -54,7 +54,7 @@
 		
 				a {
 					color: #787878;		
-					background-color: $third-color;
+					background-color: #2e2e2e;
 					display: inline-block;
 					line-height: 1.8125rem;
 					width: 2.8125rem;
@@ -103,21 +103,6 @@
 		}
 	}
 
-	@include media-breakpoint-down(md) {
-
-		&.widget-links {
-
-			.widget-content {
-				justify-content: space-between;
-			}
-
-			ul {
-				width: auto;
-				margin: auto;
-			}
-		}
-}
-
 	// Widget - Payments
 	&.widget-payment {
 		p {
@@ -142,11 +127,6 @@
 				border-radius: .25rem;
 
 				@include border-radius(0.25rem);
-
-				@include media-breakpoint-down(sm) {
-					width: 6rem !important;
-					height: 3.5rem;
-				}
 
 				&.visa {
 					background-image: url(../images/payments/visa.svg);
@@ -179,10 +159,6 @@
 			p {
 				color: #b8b6b6;
 				font-size: 0.875rem;
-
-				@include media-breakpoint-down(lg) {
-					text-align: left !important;
-				}
 
 				&.h4 {
 					font-size: 1.5rem;
@@ -254,6 +230,62 @@
 			::placeholder {
 				color: #c3c3c3;
 				opacity: 1; /* Firefox */
+			}
+		}
+	}
+
+	// Widget - Contact
+	&.widget-contact {
+		.contact-email {
+			font-size: 2.25rem;
+			font-family: $heading-font;
+			font-weight: 400;
+			color: $primary;
+			line-height: 4rem;
+			margin-bottom: 0;
+		}
+	
+		.contact-title {
+			font-size: $h1-font-size;
+			font-family: $body-font;
+			font-weight: 800;
+			color: $secondary;
+			line-height: 4rem;
+		}
+	
+		.contact-icons {
+			&.dark-contact a {
+				color: white;
+				font-size: 0.7rem;
+			}
+	
+			&.light-contact a {
+				color: $secondary;
+				font-size: 0.875rem;
+			}
+	
+			li {
+	
+				list-style: none;
+				margin-bottom: 0.3rem;
+	
+				a {
+					font-family: $body-font;
+					line-height: 2rem;
+					
+					&:hover {
+						color: $primary;
+					}
+	
+					.contact-icon {
+						color: $white;
+						display: inline-block;
+						margin-right: 1.2rem;
+						font-size: 1.2rem;
+						width: 1.8rem;
+						text-align: center;
+					}
+				}
 			}
 		}
 	}

@@ -7,26 +7,17 @@
 
 .error-404 {
     position: relative;
+    padding-top: 7rem;
+    padding-bottom: 8.875rem;
 
-    .error-link {   
-        position: absolute;
-        bottom: 20%;
-        width: 100%;
-    }
-    
-    @include media-breakpoint-down(sm) {
-
+    .error-banner {
         img {
-            height: 48% !important;
-        }
+            max-width: 42.875rem;
+            width: 100%;
+        }        
+    }
 
-        .error-link {
-            bottom: 18%;
-            
-            a {
-                padding: .8rem 1.2rem;
-                font-size: .7rem;
-            }
-        }
+    p {
+        font-size: 1.3125rem;
     }
 }

@@ -23,7 +23,7 @@
 	}
 
 	a {
-		text-decoration: none !important;
+		text-decoration: none;
 	}
 }
 
@@ -47,11 +47,12 @@
 
 #copyrights {
 	color: #787878;
+	font-size: 0.875rem;
 	font-weight: 600;	
-	line-height: 2;
+	line-height: 2;	
 	z-index: 1;	
 
-	@include media-breakpoint-down(sm) {
-		font-size: 0.7rem;
+	@include media-breakpoint-up(lg) {
+		margin-right: 2.25rem;
 	}
 }

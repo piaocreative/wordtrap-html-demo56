@@ -1,0 +1,50 @@
+.testimonial-image {
+}
+
+.testimonial-detail {
+	p {
+		line-height: 1.75rem;
+	}
+
+	.testimonial-author {
+        .author-avatar {
+            img {
+                max-width: 6.125rem;
+            }
+        }
+
+		.author-age {
+            color: #848484;
+            font-size: 0.875rem;
+		}
+
+		.author-name {
+			font-size: 1.125rem;
+		}
+
+        .author-rating {
+            i {
+                font-size: 0.875rem;
+            }
+        }
+
+        .author-social {
+            li {
+                display: inline-block;
+
+                a {
+                    color: #cecece;
+                    padding: 0 0.9375rem;
+                }
+            }
+        }
+	}
+	
+	.widget-custom-html {
+		.widget-content {
+			i {
+				color: #cecece;
+			}
+		}
+	}
+}
